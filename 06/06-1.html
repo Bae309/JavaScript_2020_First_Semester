@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--202095041 배성윤 // 5월 6일 // 6장 자바스크립트-->
+<html>
+<head>
+	<title>Javascript 연습</title>
+	<style>
+		#msg {
+			width:250px;
+			height:100px;
+			padding:10px;
+			margin:10px;
+			border:2px solid green;
+			font-size:20px;
+		}
+	</style>
+	<script>
+		function hello(){
+			//alert("안녕하세요");
+			//document.write("안녕하세요!");
+			//console.log("안녕하세요!");
+			//document.getElementById('p1').innerHTML="<h2>안녕하세요</h2>";
+			//document.getElementsByTagName('h1')[0].innerHTML="<h2>안녕하세요</h2>";
+			//document.getElementsByTagName('div')[0].innerHTML=form1.txt1.value + "님 안녕하세요";
+			var str = form1.txt1.value + "님 안녕하세요";
+			document.getElementById('msg').innerHTML=str;
+		}
+	</script>
+</head>
+<body>
+	<h1 id="p1">Javascript 연습 </h1>
+	<h2 id="p2">202095041 배성윤 </h2>
+	<form name="form1">
+		<input type="text" name="txt1" placeholder="이름입력">
+		<input type="button" value="확인" onclick="hello();">
+		<input type="reset" value="취소">
+	</form>
+	<div id="msg">
+	</div>
+</body>
+</html>

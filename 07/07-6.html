@@ -1,0 +1,78 @@
+<!DOCKTYPE html>
+<!--202095041 배성윤 // 5월 11일 // 7장 Javascript2-->
+<html>
+<head>
+	<title>간단한 계산기</title>
+	<style>
+		.box{
+			border: 2px solid #B2CCFF;
+			width: 400px;
+			height : 40px;
+			padding : 10px;
+			margin : 10px;
+			text-align:center;
+		}
+	</style>
+	<script>
+		function show () {
+			var num1= parseInt(myform.txt1.value);
+			var num2= parseInt(myform.txt2.value);
+			var num3= 0;
+			
+			
+			//if문
+		/*	if (myform.op.value == "+"){
+				num3=num1+num2;
+			}
+			else if (myform.op.value == "-"){
+				num3=num1-num2;
+			}
+			else if (myform.op.value == "*"){
+				num3=num1*num2;
+			}
+			else {
+				num3=num1/num2;
+			}
+		*/
+			//switch문
+			switch (myform.op.value) {
+				case "+" : 
+					num3=num1+num2;
+					break;
+				case "-" : 
+					num3=num1-num2;
+					break;
+				case "*" : 
+					num3=num1*num2;
+					break;
+				case "/" : 
+					num3=num1/num2;
+					break;
+				
+			}
+			
+			myform.txt3.value = num3;
+			
+		}
+	</script>
+</head>
+<body>
+	<h1>계산기</h1>
+	<form name="myform">
+		<div>
+			<input type="text" name="txt1" id="txt1" size="6" placeholder="숫자1">
+			<select name="op" id="op">
+				<option value="+"> + </option>
+				<option value="-"> - </option>
+				<option value="*"> * </option>
+				<option value="/"> / </option>
+			</select>
+			<input type="text" name="txt2" id="txt2" size="6" placeholder="숫자2">
+			<input type="button" value="=" onclick="show();">
+			<input type="text" name="txt3" size="6" id="txt3">
+			<input type="reset" value="다시 계산">
+		</div>
+	</form>
+	
+</body>
+</html>

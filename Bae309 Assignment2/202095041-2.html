@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--202095041 배성윤 // 6월 1일 // 과제 2-2번-->
+
+<html>
+<head>
+	<title>커피주문</title>
+	<style>
+		form {
+			width : 50%;
+		}
+		.box1 {
+			border-radius:10px;
+			border : 2px solid #73AD21;
+			background-color : #73AD21;
+			padding:10px;
+			margin:10px;
+			width:400px;
+			height:20px;
+			color:white;
+			text-align:center;
+			box-shadow: 5px 4px 3px 2px black;
+		}
+		.box2 {
+			padding:10px;
+			margin:10px;
+			width:400px;
+		}
+		.box3 {
+			padding:10px;
+			margin:10px;
+			width:400px;
+			border : 2px solid #73AD21;
+		}
+		.box4 {
+			padding:10px;
+			margin:10px;
+			width:400px;
+			text-align:center;
+		}
+	</style>
+	<script>
+		function show(){
+			
+			var 
+			var str = "";
+			
+			str= str + myform.sel_coffee.value + "\n";
+			str= str + myform.sel_size.value + "사이즈" + "\n";
+			str= str + myform.text.value + "잔은 총" + "\n";
+			str= str + myform. + "원입니다." + "<br>"; + "\n" ;
+			str= str + myform.checkbox.value;
+			
+			alert(str);
+		}
+	</script>
+</head>
+<body>
+<form name="myform">
+	<div class="box1">
+		커피주문하기
+	</div>
+	<div class="box2">
+		<p>
+		<h3>[메뉴]</h3>
+		<ul>
+		<li> 에스프레소 : 2000원</li>
+		<li> 카푸치노 : 3000원</li>
+		<li> 카페라떼 : 3500원</li>
+		</ul>
+		</p>
+	</div>
+	<div class="box3">
+		<p>
+		<label>커피선택:</label>
+		<select name="sel_coffee" id="sel_coffee">
+			<option value="espresso">에스프레소</option>
+			<option value="espresso" selected>카푸치노</option>
+			<option value="espresso">카페라떼</option>
+		</select>
+		</p>
+		<p>
+		<label>사이즈:</label>
+		<span>
+		<label for="sel_size_tall"> Tall</label>
+		<input type="radio" name="sel_size" id="sel_size_tall" value="Tall">
+		<label for="sel_size_grande"> Grande(500원)</label>
+		<input type="radio" name="sel_size" id="sel_size_grande" value="Grande">
+		<label for="sel_size_tall"> Venti(1000원)</label>
+		<input type="radio" name="sel_size" id="sel_size_venti" value="Venti">
+		</span>
+		</p>
+		<p>
+		<label>수량:</label>
+		<input type="button" value="-" onclick="evalMake('-');">
+		<input type="text" name="txt" placeholder="1" size="5">
+		<input type="button" value="+" onclick="evalMake('+');">
+		</p>
+		<p>
+		<label>선택사항:</label>
+		<label for="sel_syrup">시럽</label>
+		<input type="checkbox" name="sel_syrup" id="sel_syrup" value="시럽">
+		<label for="sel_sugar">설탕</label>
+		<input type="checkbox" name="sel_sugar" id="sel_sugar" value="설탕">
+		<label for="sel_shots">샷추가</label>
+		<input type="checkbox" name="sel_shots" id="sel_shots" value="샷추가">
+		<label for="sel_ice">얼음</label>
+		<input type="checkbox" name="sel_ice" id="sel_ice" value="얼음">
+		</p>
+	</div>
+	<div class="box4">
+	<p>
+	<input type="submit" value="주문하기">
+	<input type="reset" value="취소">
+	</p>
+	</div>
+</form>
+</body>
+</html>

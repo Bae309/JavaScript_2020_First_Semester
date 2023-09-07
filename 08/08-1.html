@@ -1,0 +1,76 @@
+<!doctype html>
+<!-- 202095041 배성윤  /  5월22일  / 8장 반복문-->
+<html>
+<head>
+	<title>8장 자바스크립트 반복문</title>
+	<style>
+		.result{
+			border:2px solid green;
+			width : 100px;
+			height : 300px;
+			text-align : center;
+			margin : 10px;
+			padding : 10px;
+			font-size: 20px;
+			padding-top:15px;
+		}
+		.box{
+			float:left;
+			text-align:center;
+		}
+	</style>
+	
+	<script>
+	//for문
+		function show1(){
+			var i;
+			var str="";
+			
+			for (i=1;i<=10;i++){
+				 str=str + i + "<br>";
+			}
+			document.get.ElementById("result1").innerHTML=str;
+		}
+	//while문
+		function show2(){
+			var i;
+			var str="";
+			
+			i=1
+			while (i<=10) {
+				str=str+i+"<br>";
+				i++;
+			}
+			document.get.ElementById("result2").innerHTML=str;
+		}
+	//Do-while문
+		function show3(){
+			var i=1;
+			var str="";
+			do{
+				str=str+i+"<br>";
+				i++;
+			}while(i<=10);
+			
+			document.get.ElementById("result3").innerHTML=str;
+	</script>
+	
+</head>
+<body>
+<h1> 1~10까지 출력 - 반복문 이용</h1>
+	<form name="myform">
+		<div class="box">
+			<input type="button" value="for문" onclick="show1();">
+			<div id="result1" class="result"></div>
+		</div>
+		<div class="box">
+			<input type="button" value="while문" onclick="show2();">
+			<div id="result2" class="result"></div>
+		</div>
+		<div class="box">
+			<input type="button" value="Do-while문" onclick="show3();">
+			<div id="result3" class="result"></div>
+		</div>
+	</form>
+</body>
+</html>

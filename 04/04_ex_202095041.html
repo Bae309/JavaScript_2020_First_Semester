@@ -1,0 +1,149 @@
+<!doctype html>
+<!--202095041 배성윤 // 4월 6일 // css-->
+
+<html>
+<head>
+	<title>header</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<style>
+		body{
+			margin:0px;
+			padding:0px;
+		}
+		
+		header{
+				background-color : #FFB2F5;
+			width:100%;
+			height:200px;
+		}
+		
+		header > div {
+			float:left;
+		}
+		
+		header img{
+			height:150px;
+			padding:20px;
+		}
+		
+		header h1{
+			color:white;
+			text-align:center;
+			margin:70px;
+		}
+		
+		nav{
+			clear:both;
+			background-color:#000000;
+			height:30px;
+		}
+		
+		nav a {
+			width : 100px;
+			height : 40px;
+			padding : 5px;
+			display : inline-block;
+			text-decoration : none;
+			text-align : center;
+		}
+		
+		nav a:link, nav a:visited {
+			color : white;
+		}
+		
+		nav a:haver, nav a:active {
+			background-color : white ;
+			color : #3DB7CC
+		}
+		
+		section {
+			margin : 10px;
+			padding : 10px;
+			width : 45%;
+			height : 200px;
+			float : left;
+			border : 1px solid #3DB7CC;
+			box-sizing: border-box;
+		}
+		
+		h2 {
+			margin : 5px;
+			padding : 10px;
+			background-color : #005766;
+			color: white;
+		}
+		
+		section p, section ul, section ol {
+			padding left : 50px;
+		}
+		section a {
+			width : 80%;
+			height : 15px;
+			padding : 5px;
+			display : inline-block;
+			text-decoration : none;
+			}
+		footer {
+			clear : both;
+			height : 50px;
+			background-color : #EAEAEA;
+			color : #5D5D5D;
+			padding : 20px;
+			font-size : 12px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div>
+			<img src="img/seongyoon.jpg">
+		</div>
+		<div>
+			<h1>배 성 윤</h1>
+		</div>
+		
+	</header>
+	<nav>
+		<a href="#s1">[개인정보]</a>&nbsp;&nbsp;
+		<a href="#s2">[학력사항]</a>&nbsp;&nbsp;
+		<a href="#s3">[자격사항]</a>&nbsp;&nbsp;
+		<a href="#s4">[자기소개]</a>&nbsp;&nbsp;
+	</nav>
+	<section id="s1">
+		<h2 class="c1">개인정보</h2>
+		<p>
+				<i class="material-icons">phone</i>&nbsp;&nbsp;010-8581-0042<br>
+				<i class="material-icons">email</i>&nbsp;&nbsp;stan309@naver.com<br>
+				<i class="material-icons">assignment</i>&nbsp;&nbsp;Silla University<br>
+		</p>
+			
+	</section>
+	<section id="s2">
+		<h2 class="c2">학력사항 </h2>
+			<ul>
+				<li> <img src="img/sinyang.jpg" width="20px"><a href="http://y-sinyang.es.kr"> 양산신양초등학교 졸업 </a></li>
+				<li> <img src="img/jungang.jpg" width="20px"><a href="http://ysja-m.gne.go.kr"> 양산중앙중학교 졸업 </a> </li>
+				<li> <img src="img/jeil.png" width="20px"><a href="http://ysjeil-h.gne.go.kr"> 양산제일고등학교 졸업 </a></li>
+				<li> <img src="img/silla.jpg" width="20px"><a href="http://www.silla.ac.kr"> 신라대학교 재학 </a></li>
+			</ul>
+	</section>
+	<section id="s3">
+		<h2 class="c1">자격사항</h2>
+			<ul>
+				<li> 자격사항 없음 </li>
+			</ul>
+	</section>
+	<section id="s4">
+		<h2 class="c2">자기소개</h2>
+		<p>
+			<a href="../01/01_ex_202095041.html" target="blank">SWOT 분석</a>
+			<br>
+			<span id="p1">본인 소개를 작성하세요.</span>
+		</p>
+	</section>
+	<footer>
+	&copy;Bae Seong Yoon, 905ho, 111dong, yangju-ro 32, Yangsan-si
+	</footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- 202095041 배성윤 // 5월 25일 // 8장 반복문 해결문제-->
+<html>
+<head>
+	<title>8장 반복문 해결문제</title>
+	<style>
+		.box1{
+			border:2px solid #73AD21;
+			background-color:#73AD21;
+			border-radius:10px;
+			text-align : center;
+			color:white;
+			width:400px;
+			height:20px;
+			padding:10px;
+			margin:10px;
+		}
+		.box2{
+			text-align:center;
+			width:400px;
+			padding:10px;
+			margin:10px;
+		}
+		.rdan {
+			font-size:40px;
+			margin-top:80px;
+		}
+		#msg{
+			border:2px solid #73AD21;
+			width:400px;
+			height:250px;
+			padding:10px;
+			text-align : center;
+			font-size:20px;
+			margin:10px;
+		}
+		img{
+			width:40px;
+			height:40px;
+		}
+	</style>
+	<script>
+		function showDan(){
+			var str="";
+			var dan;
+			if (myform.dan.value=="") {
+				alert("단을 선택하주세요");
+				myform.dan.focus();
+				return;
+			}
+			dan=parseInt(myform.dan.value);
+			for (var i=1; i<=9 ; i++){
+				str=str+dan+"*"+i+"="+(dan*i)+"<br>";
+			}
+			document.getElementById("msg").innerHTML=str;
+		}
+		function showRandom(){
+			var str="";
+			var dan=Math.floor(Math.random()*8)+2;
+			var i=Math.floor(Math.random()*9)+1;
+			
+			var ans=dan*i
+			var ans10= Math.floor(ans/10)
+			var ans1=ans%10;
+			
+			str="<div class=dan'rdan'>"+"<img src='./img/"+dan+".png'>";
+			str=str+"<img src='./img/x.png'>";
+			str=str+"<img src='./img/"+i+".png'>;
+			str=str+"<img src='./img/equal.png'>;
+			if (ans10==0)
+				str=srt+"<img src='./img/blank.png'>";
+			else
+				str=srt+"<img src='./img/"+ ans10 +".png'>";
+				str=str+"<img src='./img/"+ ans1 +".png'>";
+				str=str+"</div>";
+			
+			document.getElementById("msg").innerHTML=str;
+		}
+		function showClear(){
+			document.getElementById("msg").innerHTML="";
+			myform.reset();
+		}
+		
+	</script>
+</head>
+<body>
+	<div class="box1">
+		구구단 학습하기
+	</div>
+	<div class="box2">
+		<form name="myform">
+			<select name="dan">
+				<option value="">단선택</option>
+				<option value="2">2단</option>
+				<option value="3">3단</option>
+				<option value="4">4단</option>
+				<option value="5">5단</option>
+				<option value="6">6단</option>
+				<option value="7">7단</option>
+				<option value="8">8단</option>
+				<option value="9">9단</option>
+			</select>
+			<input type="button" value="단보기" onclick="showDan();">
+			<input type="button" value="랜덤보기" onclick="showRandom();">
+			<input type="button" value="지우기" onclick="showClear();">
+		</form>
+	</div>
+	<div id="msg">
+	</div>
+</body>
+</html>
